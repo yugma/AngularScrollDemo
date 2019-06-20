@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'AngularScrollDemo';
+  links = [{
+    name: 'Scroll',
+    path: 'scroll'
+  },
+  {
+    name: 'Drag and Drop',
+    path: 'drag-drop'
+  }];
+  activeLink = this.links[0].path;
+  background = '';
+
+  toggleBackground() {
+    this.background = this.background ? '' : 'primary';
+  }
 }
